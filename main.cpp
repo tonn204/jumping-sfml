@@ -1,8 +1,6 @@
-﻿#include <iostream>
-
 #include <SFML/Graphics.hpp>
 
-const float GRAVITY = 0.1f;
+const float GRAVITY = 0.07f;
 
 float player_velocityX = 0.0f, player_velocityY = 0.0f;
 float player_pos_X = 640.0f, player_pos_Y = 600.0f;
@@ -60,8 +58,7 @@ int main()
         }            
 
         player.move(player_velocityX * deltaTime, player_velocityY * deltaTime);
-        std::cout << player_velocityX << std::endl;
-
+       
         window.clear();
         window.draw(player);
         window.display();
